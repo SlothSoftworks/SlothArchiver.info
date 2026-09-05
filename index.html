@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SlothArchiver — Your own personal, offline video archive</title>
+<meta name="description" content="SlothArchiver is a free, open-source desktop app for downloading and organizing videos and audio from YouTube and other platforms into a permanent, searchable library on your own computer. No Docker, no server, no subscriptions.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="SlothArchiver — Your own personal, offline video archive">
+<meta property="og:description" content="A free desktop app for archiving videos and audio from YouTube and other platforms into a real, searchable library on your own machine. No Docker, no server, no subscriptions — ever.">
+<meta property="og:url" content="https://slothsoftworks.github.io/SlothArchiver-info/">
+<meta property="og:image" content="assets/logo.png">
+
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">
+      <img class="brand-mark" src="assets/logo.png" alt="" width="32" height="29">
+      <span class="brand-name">SlothArchiver</span>
+    </a>
+
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#why">Why</a>
+      <a href="#features">Features</a>
+      <a href="#demos">Demos</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://github.com/SlothSoftworks/Sloth-Archiver" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+
+    <a class="btn btn-primary btn-small" id="nav-download" href="https://github.com/SlothSoftworks/Sloth-Archiver/releases/latest" target="_blank" rel="noopener">Download</a>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
+    <a href="#why">Why</a>
+    <a href="#features">Features</a>
+    <a href="#demos">Demos</a>
+    <a href="#faq">FAQ</a>
+    <a href="https://github.com/SlothSoftworks/Sloth-Archiver" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <img class="hero-logo" src="assets/logo.png" alt="SlothArchiver" width="512" height="461">
+      <p class="eyebrow">Free &amp; open source · no accounts · no server</p>
+      <h1>Your own personal,<br>offline video archive.</h1>
+      <p class="hero-sub">
+        SlothArchiver is a free desktop app for downloading and organizing videos and
+        audio from YouTube and other platforms into a permanent library on your own
+        computer. Point it at a folder, and it does the archiving for you — no
+        subscriptions, no re-uploading to yet another cloud service, no losing access
+        when a video gets taken down or a channel disappears.
+      </p>
+
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#download">Download for free</a>
+        <a class="btn btn-ghost" href="https://github.com/SlothSoftworks/Sloth-Archiver" target="_blank" rel="noopener">View on GitHub</a>
+      </div>
+
+      <ul class="hero-badges" aria-label="Highlights">
+        <li>Windows · macOS · Linux</li>
+        <li>GPL-3.0 licensed</li>
+        <li>Zero paywall, forever</li>
+      </ul>
+    </div>
+
+    <div class="hero-glow" aria-hidden="true"></div>
+  </section>
+
+  <!-- ================= WHY ================= -->
+  <section class="section" id="why">
+    <div class="wrap">
+      <span class="kicker">Why SlothArchiver</span>
+      <h2>The lazy option, in the best sense.</h2>
+      <p class="section-lede">
+        Self-hosted servers like TubeArchivist or Pinchflat give you a real archive,
+        but only if you're willing to run Docker, manage a server, and keep a machine
+        on around the clock. Lightweight downloaders skip the setup, but most just
+        drop files in a folder and call it done — no real organization, nothing
+        actually archived. SlothArchiver is a normal app you install like any other:
+        zero server to babysit, zero config to get right, and a real searchable
+        library, playlist tracking, and version history that happen automatically
+        from there.
+      </p>
+
+      <div class="table-scroll">
+        <table class="compare">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col" class="col-us">SlothArchiver</th>
+              <th scope="col">Arroxy</th>
+              <th scope="col">TubeArchiver</th>
+              <th scope="col">TubeArchivist / Pinchflat</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Free, no paywall</th>
+              <td class="col-us"><span class="yes">Yes</span></td>
+              <td><span class="yes">Yes</span></td>
+              <td><span class="no">Tiered plans</span></td>
+              <td><span class="yes">Yes</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Open source</th>
+              <td class="col-us"><span class="yes">Yes</span></td>
+              <td><span class="yes">Yes</span></td>
+              <td><span class="no">No</span></td>
+              <td><span class="yes">Yes</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Runs locally — no Docker or server</th>
+              <td class="col-us"><span class="yes">Yes</span></td>
+              <td><span class="yes">Yes</span></td>
+              <td><span class="yes">Yes</span></td>
+              <td><span class="no">No</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Real searchable library</th>
+              <td class="col-us"><span class="yes">Yes</span></td>
+              <td><span class="no">No</span></td>
+              <td><span class="no">History list only</span></td>
+              <td><span class="yes">Yes</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Playlist tracking detects removed videos</th>
+              <td class="col-us"><span class="yes">Yes</span></td>
+              <td><span class="no">No</span></td>
+              <td><span class="no">One-time fetch</span></td>
+              <td><span class="yes">Yes</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Per-video version history</th>
+              <td class="col-us"><span class="yes">Yes</span></td>
+              <td><span class="no">No</span></td>
+              <td><span class="no">No</span></td>
+              <td><span class="no">No</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Library is plain files, no hidden database</th>
+              <td class="col-us"><span class="yes">Yes</span></td>
+              <td><span class="yes">Yes</span></td>
+              <td><span class="muted">N/A</span></td>
+              <td><span class="no">Elasticsearch</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Built-in playback in the app</th>
+              <td class="col-us"><span class="yes">Yes</span></td>
+              <td><span class="no">No</span></td>
+              <td><span class="no">No</span></td>
+              <td><span class="yes">Web UI</span></td>
+            </tr>
+            <tr>
+              <th scope="row">In-app clipping, MP3 extraction &amp; format tools</th>
+              <td class="col-us"><span class="yes">Yes</span></td>
+              <td><span class="no">No</span></td>
+              <td><span class="no">No</span></td>
+              <td><span class="no">No</span></td>
+            </tr>
+            <tr>
+              <th scope="row">macOS / Windows / Linux</th>
+              <td class="col-us"><span class="yes">Yes</span></td>
+              <td><span class="yes">Yes</span></td>
+              <td><span class="no">Mac/Win only</span></td>
+              <td><span class="yes">Via Docker</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">No other tool in this space currently checks every one of those boxes at once — that combination is the whole point of SlothArchiver.</p>
+    </div>
+  </section>
+
+  <!-- ================= FEATURES ================= -->
+  <section class="section section-alt" id="features">
+    <div class="wrap">
+      <span class="kicker">Features</span>
+      <h2>Everything you need. Nothing behind a paywall.</h2>
+
+      <div class="grid features-grid">
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">💸</div>
+          <h3>No paywall, ever</h3>
+          <p>Every feature here is free today and stays free in future updates. No tiers, no locked resolutions, no daily download caps.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">🌐</div>
+          <h3>Download video or audio</h3>
+          <p>From YouTube and a growing list of platforms — SoundCloud, TikTok, Instagram, Facebook, Dailymotion, and more — in the quality you choose.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">📚</div>
+          <h3>A real library, not a folder</h3>
+          <p>Every video is organized by channel, searchable, and keeps a history of versions if you ever re-fetch it. SlothArchiver actually keeps track of what you have.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">📋</div>
+          <h3>Playlist archiving</h3>
+          <p>Save an entire playlist at once, refresh it later to pick up new additions, and get removed videos automatically flagged instead of silently disappearing.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">⚡</div>
+          <h3>Bulk downloading</h3>
+          <p>Paste a whole list of links or a playlist and let the app work through them in the background, several at a time.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">▶️</div>
+          <h3>Built-in playback</h3>
+          <p>Watch or listen to anything in your library right inside the app — no need to hunt for the file afterward.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">🛠️</div>
+          <h3>Handy media tools</h3>
+          <p>Extract audio as MP3, convert formats, trim clips, and embed metadata/cover art, all without leaving the app.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">🔄</div>
+          <h3>Stays current</h3>
+          <p>The app can update its own download engine on demand, so it keeps working as sites change.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DEMOS ================= -->
+  <section class="section" id="demos">
+    <div class="wrap wrap-wide">
+      <span class="kicker">See it in action</span>
+      <h2>Demos</h2>
+      <p class="section-lede">
+        A quick look at some of the features that make SlothArchiver more than just a
+        download button.
+      </p>
+
+      <div class="demos-list">
+        <article class="demo-row">
+          <div class="demo-media">
+            <video autoplay muted loop playsinline preload="auto" poster="https://github.com/user-attachments/assets/86ef78c2-a488-4056-a788-e7ef8c04cf99">
+              <source src="https://github.com/user-attachments/assets/8c643fc2-f8a3-47aa-99ff-b0a89243fd24">
+            </video>
+          </div>
+          <div class="demo-copy">
+            <h3>Up to 8K resolution</h3>
+            <p>Every quality the source video offers, personally tested up to 4320p — no resolution locked behind a paywall.</p>
+          </div>
+        </article>
+        <article class="demo-row">
+          <div class="demo-media">
+            <video autoplay muted loop playsinline preload="auto">
+              <source src="https://github.com/user-attachments/assets/9103a0ef-9929-49c4-985c-5f39c6ad1196">
+            </video>
+          </div>
+          <div class="demo-copy">
+            <h3>Playlist saving</h3>
+            <p>Save a playlist once and SlothArchiver remembers exactly what was on it — even for videos that later get pulled.</p>
+          </div>
+        </article>
+        <article class="demo-row">
+          <div class="demo-media">
+            <img src="https://github.com/user-attachments/assets/572badb7-5b30-4b67-bb32-89bdf88e22fe" alt="Per-video version history in SlothArchiver's library view" loading="lazy" width="1580" height="857">
+          </div>
+          <div class="demo-copy">
+            <h3>Version history</h3>
+            <p>Download the original before it changes, and keep the newer version side by side instead of overwriting what you already had.</p>
+          </div>
+        </article>
+        <article class="demo-row">
+          <div class="demo-media">
+            <video autoplay muted loop playsinline preload="auto">
+              <source src="https://github.com/user-attachments/assets/7e43f8f7-19e3-49c3-b8e0-d2c346137ec0">
+            </video>
+          </div>
+          <div class="demo-copy">
+            <h3>Seriously long videos</h3>
+            <p>Working directly with yt-dlp at a low level, SlothArchiver has been tested successfully on uploads over 12 hours long.</p>
+          </div>
+        </article>
+        <article class="demo-row">
+          <div class="demo-media">
+            <video autoplay muted loop playsinline preload="auto">
+              <source src="https://github.com/user-attachments/assets/b9010a07-93ae-4aa3-bc09-4cc4d1b51356">
+            </video>
+          </div>
+          <div class="demo-copy">
+            <h3>Fast library search &amp; sorting</h3>
+            <p>Search across your whole library, sort by date, channel, title, or quality, and browse by channel or playlist.</p>
+          </div>
+        </article>
+        <article class="demo-row">
+          <div class="demo-media">
+            <video autoplay muted loop playsinline preload="auto">
+              <source src="https://github.com/user-attachments/assets/b1884a23-6825-4eaf-bf54-96b28cd0feed">
+            </video>
+          </div>
+          <div class="demo-copy">
+            <h3>Light footprint, no lock-in</h3>
+            <p>Your library lives as plain files and folders. Want it gone? Delete the folder and it's gone, completely.</p>
+          </div>
+        </article>
+        <article class="demo-row">
+          <div class="demo-media">
+            <video autoplay muted loop playsinline preload="auto">
+              <source src="https://github.com/user-attachments/assets/8d9caa6d-bdf1-45e4-a87e-102b327d536e">
+            </video>
+          </div>
+          <div class="demo-copy">
+            <h3>Built-in media utilities</h3>
+            <p>Extract MP3s, embed metadata and cover art, cut a clip, or convert format — all from the library view.</p>
+          </div>
+        </article>
+        <article class="demo-row">
+          <div class="demo-media">
+            <video autoplay muted loop playsinline preload="auto">
+              <source src="https://github.com/user-attachments/assets/d4d55669-654f-485a-9b41-62277d9d8fce">
+            </video>
+          </div>
+          <div class="demo-copy">
+            <h3>More than just YouTube</h3>
+            <p>SoundCloud, TikTok, Instagram, Facebook, Dailymotion, and more — SlothArchiver figures out the platform automatically.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section class="section section-alt" id="faq">
+    <div class="wrap wrap-narrow">
+      <span class="kicker">Questions</span>
+      <h2>Frequently asked questions</h2>
+
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Is SlothArchiver free?</summary>
+          <div class="faq-body"><p>Yes — it's free and open source, in full, with no plan to change that.</p></div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Is it legal to download videos with this app?</summary>
+          <div class="faq-body">
+            <p>SlothArchiver uses yt-dlp to download video and metadata, which acts the same way a real viewer's browser would — it requests a public page and reads back whatever that page already serves. Nothing here involves hacking, cracking DRM, or accessing content that isn't already publicly available. YouTube, however, doesn't approve the use of these tools or any means of downloading videos even if they are public.</p>
+            <p>SlothArchiver is a personal-use, local tool — everything it downloads stays in your own library on your own machine. It doesn't upload, host, re-share, or otherwise distribute anything you download. What you do with the files afterward, and whether that complies with a given platform's Terms of Service or your local copyright law, is your responsibility as the user.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What platforms can I download from?</summary>
+          <div class="faq-body"><p>YouTube is fully supported for downloads, library, and playlists. TikTok, Instagram, Twitter, Facebook, SoundCloud, and Dailymotion are supported for direct downloads.</p></div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What operating systems does SlothArchiver run on?</summary>
+          <div class="faq-body"><p>Windows, macOS, and Linux. This is a solo dev project and executables are built manually per platform, so expect the occasional OS-specific rough edge — raise an issue on GitHub if you hit one.</p></div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do I need a YouTube account or to sign in?</summary>
+          <div class="faq-body"><p>No — it works without an account. Keep in mind you might be locked out of downloading certain videos (like age-restricted ones), or temporarily blocked by YouTube if it detects a high volume of downloads.</p></div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Where are my downloaded videos stored?</summary>
+          <div class="faq-body"><p>Wherever you tell it to — you set up a library folder on first install, and that becomes the base path everything gets organized under. For one-off downloads, you pick the destination each time (or set a default).</p></div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What video quality can I download?</summary>
+          <div class="faq-body"><p>Every quality yt-dlp exposes for the source video — for YouTube and Dailymotion that's been personally tested up to 4320p (8K), depending on what the original upload offers.</p></div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can I download an entire playlist?</summary>
+          <div class="faq-body"><p>Yes, for YouTube — as part of the bulk-add feature, which saves both the playlist and the video data into your library. Other platforms currently support single-video downloads only.</p></div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Does SlothArchiver collect any of my data?</summary>
+          <div class="faq-body"><p>No. The app is designed not to collect or require data anywhere it can avoid it — that's also why library management runs on the plain filesystem instead of a database.</p></div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How do I report a bug or request a feature?</summary>
+          <div class="faq-body"><p><a href="https://github.com/SlothSoftworks/Sloth-Archiver/issues" target="_blank" rel="noopener">Raise an issue on GitHub</a> — for bugs, include enough detail to reproduce it; for features, a clear description of what you'd like to see. This is a solo project worked on in spare time, so thorough reports help a lot.</p></div>
+        </details>
+      </div>
+
+      <p class="faq-more">
+        Have a more detailed question? The full FAQ lives in the
+        <a href="https://github.com/SlothSoftworks/Sloth-Archiver#faq" target="_blank" rel="noopener">project README</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= DOWNLOAD ================= -->
+  <section class="section download-section" id="download">
+    <div class="wrap download-inner">
+      <span class="kicker">Get started</span>
+      <h2>Point it at a folder. That's the whole setup.</h2>
+      <p class="section-lede">
+        All builds are unsigned, so your OS will show a first-run security warning on
+        first launch — that's expected for any unsigned app, not a sign anything's
+        wrong. See the
+        <a href="https://github.com/SlothSoftworks/Sloth-Archiver#installing" target="_blank" rel="noopener">Installing guide</a>
+        on GitHub for the two-second bypass on each platform.
+      </p>
+
+      <div class="download-grid">
+        <a class="download-card" href="https://github.com/SlothSoftworks/Sloth-Archiver/releases/latest" target="_blank" rel="noopener">
+          <span class="download-icon" aria-hidden="true">🪟</span>
+          <span class="download-os">Windows</span>
+          <span class="download-sub">Installer &amp; portable .exe</span>
+        </a>
+        <a class="download-card" href="https://github.com/SlothSoftworks/Sloth-Archiver/releases/latest" target="_blank" rel="noopener">
+          <span class="download-icon" aria-hidden="true">🍎</span>
+          <span class="download-os">macOS</span>
+          <span class="download-sub">Apple Silicon &amp; Intel .dmg</span>
+        </a>
+        <a class="download-card" href="https://github.com/SlothSoftworks/Sloth-Archiver/releases/latest" target="_blank" rel="noopener">
+          <span class="download-icon" aria-hidden="true">🐧</span>
+          <span class="download-os">Linux</span>
+          <span class="download-sub">.AppImage</span>
+        </a>
+      </div>
+
+      <p class="download-note">All downloads take you to the latest release on GitHub, where you'll find the exact file for your system.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <img class="brand-mark" src="assets/logo.png" alt="" width="32" height="29">
+      <span>SlothArchiver</span>
+    </div>
+
+    <nav class="footer-links" aria-label="Footer">
+      <a href="https://github.com/SlothSoftworks/Sloth-Archiver" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://github.com/SlothSoftworks/Sloth-Archiver/releases/latest" target="_blank" rel="noopener">Releases</a>
+      <a href="https://github.com/SlothSoftworks/Sloth-Archiver/issues" target="_blank" rel="noopener">Issues</a>
+      <a href="https://github.com/SlothSoftworks/Sloth-Archiver/blob/main/ROADMAP.md" target="_blank" rel="noopener">Roadmap</a>
+      <a href="https://github.com/SlothSoftworks/Sloth-Archiver/blob/main/LICENSE" target="_blank" rel="noopener">GPL-3.0 License</a>
+      <a href="https://github.com/SlothSoftworks/Sloth-Archiver/blob/main/SECURITY.md" target="_blank" rel="noopener">Security</a>
+    </nav>
+
+    <p class="footer-note">Free and open source. Not affiliated with YouTube or any platform it can download from.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
