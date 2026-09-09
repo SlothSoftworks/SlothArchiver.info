@@ -351,11 +351,6 @@
 
       <div class="faq-list">
         <details class="faq-item">
-          <summary>How is this different from other YouTube downloaders?</summary>
-          <div class="faq-body"><p>Most tools fall into one of two camps: self-hosted servers (like TubeArchivist or Pinchflat) that need Docker and a machine running around the clock, or desktop downloaders that save files but don't keep an actual library — some of which eventually put real features behind a subscription. SlothArchiver is a normal desktop app with a real searchable library, playlist tracking, and version history, and it's free without any tier to upgrade to. See <a href="#why">Why SlothArchiver?</a> above for a fuller comparison.</p></div>
-        </details>
-
-        <details class="faq-item">
           <summary>Is SlothArchiver free?</summary>
           <div class="faq-body"><p>Yes — it's free and open source, in full, with no plan to change that.</p></div>
         </details>
@@ -363,15 +358,14 @@
         <details class="faq-item">
           <summary>Is it legal to download videos with this app?</summary>
           <div class="faq-body">
-            <p>SlothArchiver uses yt-dlp to download video and metadata, which acts as a browser under the hood. For the most part, it works the same way a real viewer's browser would: it requests a public page and reads back whatever that page already serves. For a few platforms, yt-dlp also has to mimic a real browser more closely to get past automated bot-detection checks — this doesn't unlock anything private or bypass any actual access control, it's just what's needed to be treated the same as a normal visitor rather than getting blocked as a script. Either way, nothing here involves hacking, cracking DRM, or accessing content that wasn't already publicly available to anyone with a browser. YouTube, however, doesn't approve the use of these tools or any means of downloading videos even if they are public.</p>
-            <p>SlothArchiver is a personal-use, local tool — everything it downloads stays in your own library on your own machine. It doesn't upload, host, re-share, or otherwise distribute anything you download with anyone else. What you do with the files afterward, and whether that complies with a given platform's Terms of Service or the copyright law in your jurisdiction, is your responsibility as the user, not something the app enforces or takes a position on for you.</p>
-            <p><strong>TL;DR:</strong> it's a gray area as far as YouTube is concerned but not illegal. This is a personal, local-only archiving tool; staying within your platform's ToS and your local copyright law is on you.</p>
+            <p>SlothArchiver uses yt-dlp to download video and metadata, which acts the same way a real viewer's browser would — it requests a public page and reads back whatever that page already serves. For a few platforms, yt-dlp also has to mimic a real browser more closely to get past automated bot-detection checks, which doesn't unlock anything private or bypass any actual access control. Either way, nothing here involves hacking, cracking DRM, or accessing content that isn't already publicly available. YouTube, however, doesn't approve the use of these tools or any means of downloading videos even if they are public.</p>
+            <p>SlothArchiver is a personal-use, local tool — everything it downloads stays in your own library on your own machine. It doesn't upload, host, re-share, or otherwise distribute anything you download. What you do with the files afterward, and whether that complies with a given platform's Terms of Service or your local copyright law, is your responsibility as the user.</p>
           </div>
         </details>
 
         <details class="faq-item">
-          <summary>What platforms does SlothArchiver support downloading from?</summary>
-          <div class="faq-body"><p>At time of writing, YouTube is fully supported for downloads, library, and playlists. For pure downloads, virtually any site <a href="https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md" target="_blank" rel="noopener">yt-dlp itself supports</a> (1800+ platforms) works, including TikTok, Instagram, Twitter, Facebook, SoundCloud, and Dailymotion, to name a few with dedicated recognition in the app's UI.</p></div>
+          <summary>What platforms can I download from?</summary>
+          <div class="faq-body"><p>YouTube is fully supported for downloads, library, and playlists. TikTok, Instagram, Twitter, Facebook, SoundCloud, and Dailymotion are supported for direct downloads.</p></div>
         </details>
 
         <details class="faq-item">
@@ -380,21 +374,13 @@
         </details>
 
         <details class="faq-item">
-          <summary>Where are my downloaded videos stored?</summary>
-          <div class="faq-body">
-            <p>For library entries: on first installation you set up a library folder, which becomes the base path everything gets organized under. After that, it's best not to move or change the files directly unless you know what you're doing, since the app expects the filesystem to stay consistent.</p>
-            <p>For one-off downloads: you pick the destination each time you click a download button, or set a default base path to start from.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
           <summary>Do I need a YouTube account or to sign in?</summary>
           <div class="faq-body"><p>No — it works without an account. Keep in mind you might be locked out of downloading certain videos (like age-restricted ones), or temporarily blocked by YouTube if it detects a high volume of downloads.</p></div>
         </details>
 
         <details class="faq-item">
-          <summary>Why would I need to load cookies / sign in?</summary>
-          <div class="faq-body"><p>For most scenarios you won't need to add cookies — it's only needed for things like age-restricted videos or members-only content. <a href="https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies" target="_blank" rel="noopener">According to yt-dlp</a>, exporting cookies to download at a high rate can risk suspension or bans on your account, so use the feature in moderation (or a throwaway account). SlothArchiver aims for solid retry and recovery behavior so you don't need cookies for most scenarios.</p></div>
+          <summary>Where are my downloaded videos stored?</summary>
+          <div class="faq-body"><p>Wherever you tell it to — you set up a library folder on first install, and that becomes the base path everything gets organized under. After that, it's best not to move or change the library files directly unless you know what you're doing, since the app expects the filesystem to stay consistent. For one-off downloads, you pick the destination each time (or set a default).</p></div>
         </details>
 
         <details class="faq-item">
@@ -404,7 +390,7 @@
 
         <details class="faq-item">
           <summary>Can I download an entire playlist?</summary>
-          <div class="faq-body"><p>Yes, for YouTube — as part of the bulk-add feature, which saves both the playlist and the video data into your library. Other platforms currently support single-video downloads only, though new features are always being explored.</p></div>
+          <div class="faq-body"><p>Yes, for YouTube — as part of the bulk-add feature, which saves both the playlist and the video data into your library. Other platforms currently support single-video downloads only.</p></div>
         </details>
 
         <details class="faq-item">
@@ -413,33 +399,8 @@
         </details>
 
         <details class="faq-item">
-          <summary>Why does the app set up extra components on first run?</summary>
-          <div class="faq-body"><p>yt-dlp and ffmpeg — the low-level tools that handle actual downloading and media processing — are bundled directly inside the installer, not fetched over the network afterward. The one thing that does happen on first run is copying yt-dlp into a per-user writable folder, since the app needs to be able to replace it later (see the next question) and the installer's own resources folder generally isn't writable without elevated permissions.</p></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>How do I update SlothArchiver?</summary>
-          <div class="faq-body"><p>Come back to this page and download the latest build for your platform. Note that the in-app "update yt-dlp" feature only updates the low-level download library, not the archiver app itself — make sure both are kept up to date.</p></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>A download is failing or I'm getting a "bot check" error: what do I do?</summary>
-          <div class="faq-body"><p>Hopefully this doesn't happen often, but you can add your cookies in the app and try again, wait until your IP stops getting flagged by YouTube, or try a VPN to change your IP. YouTube's bot detection is unpredictable, so sometimes simply trying again is enough.</p></div>
-        </details>
-
-        <details class="faq-item">
           <summary>How do I report a bug or request a feature?</summary>
           <div class="faq-body"><p><a href="https://github.com/SlothSoftworks/Sloth-Archiver/issues" target="_blank" rel="noopener">Raise an issue on GitHub</a> — for bugs, include enough detail to reproduce it; for features, a clear description of what you'd like to see. This is a solo project worked on in spare time, so thorough reports help a lot.</p></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>What features are still in development?</summary>
-          <div class="faq-body"><p>Check the <a href="https://github.com/SlothSoftworks/Sloth-Archiver/blob/master/ROADMAP.md" target="_blank" rel="noopener">Roadmap</a> for a running list of what's currently being worked on or explored.</p></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Do you accept contributions?</summary>
-          <div class="faq-body"><p>Not at this moment — a proper contribution guide and pipeline would need to be in place first. That may change if an actual community forms around the app.</p></div>
         </details>
       </div>
 
